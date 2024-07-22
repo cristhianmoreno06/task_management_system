@@ -99,6 +99,7 @@ File: Main Css File
 @import "custom/plugins/ion-rangeslider";
 @import "custom/plugins/cropper";
 
+/* Estilos personalizados */
 #searchForm .input-group {
     position: relative;
 }
@@ -110,6 +111,7 @@ File: Main Css File
     right: 25px;
     top: 0;
     bottom: 0;
+    display: flex;
     align-items: center;
     z-index: 10;
 }
@@ -122,5 +124,27 @@ File: Main Css File
 
 #searchForm .search-icon {
     pointer-events: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.is-valid {
+    border-color: green;
+}
+
+.is-invalid {
+    border-color: red;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 

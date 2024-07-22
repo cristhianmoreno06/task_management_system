@@ -895,7 +895,7 @@ class BootstrapIcons {
             "list-nested",
             "list-ol",
             "list-stars",
-            "list-task",
+            "list-tasks",
             "list-ul",
             "list",
             "lock-fill",

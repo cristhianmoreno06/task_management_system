@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,13 +26,6 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected string $redirectTo = '/tracking/index';
-
-    /**
      * Create a new controller instance.
      *
      * @return void
@@ -39,6 +33,19 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        // Redirigir según el rol del usuario
+        if ($user->hasRole('admin')) {
+            return redirect()->route('tasks.index');
+        } elseif ($user->hasRole('user')) {
+            return redirect()->route('profile', $user->id);
+        }
+
+        // Redirigir a una ruta por defecto si no se cumple ninguno de los roles anteriores
+        return redirect()->route('/'); // Cambia 'home' por la ruta deseada
     }
 
     /**

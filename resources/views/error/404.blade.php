@@ -20,10 +20,10 @@
                                 <div class="col-lg-6">
                                     <div class="d-flex flex-column h-100">
                                         <div class="auth-brand p-4">
-                                            <a href="{{ route('any', 'index') }}" class="logo-light">
+                                            <a href="#" class="logo-light">
                                                 <img src="/images/logo.png" alt="logo" height="22">
                                             </a>
-                                            <a href="{{ route('any', 'index') }}" class="logo-dark">
+                                            <a href="#" class="logo-dark">
                                                 <img src="/images/logo-dark.png" alt="dark logo" height="22">
                                             </a>
                                         </div>
@@ -31,14 +31,14 @@
                                             <div class="d-flex justify-content-center mb-5">
                                                 <img src="/images/svg/404.svg" alt="" class="img-fluid">
                                             </div>
-    
+
                                             <div class="text-center">
                                                 <h1 class="mb-3">404</h1>
                                                 <h4 class="fs-20">Page not found</h4>
                                                 <p class="text-muted mb-3"> It's looking like you may have taken a wrong turn. Don't worry... it happens to the best of us.</p>
                                             </div>
-    
-                                            <a href="{{ route('any', 'index') }}" class="btn btn-soft-primary w-100"><i class="ri-home-4-line me-1"></i>  Back to Home</a>
+
+                                            <a href="/tasks/index" class="btn btn-soft-primary w-100"><i class="ri-home-4-line me-1"></i>  Back to Home</a>
                                         </div>
                                     </div>
                                 </div> <!-- end col -->
@@ -53,9 +53,9 @@
         <!-- end page -->
 
         <footer class="footer footer-alt fw-medium">
-            <span class="text-dark-emphasis"><script>document.write(new Date().getFullYear())</script> © Velonic - Theme by Techzaa</span>
+            <span class="text-dark-emphasis"><script>document.write(new Date().getFullYear())</script> Task Management - Hecho por <b>Cristhian Moreno</b></span>
         </footer>
-        
+
         @include('layouts.shared/footer-scripts')
 
     </body>

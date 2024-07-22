@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "62656fc5-f44e-46cf-9301-bcba2146145e",
+		"name": "Task-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10974818"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"user.api\",\r\n  \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task_management_system.local/api/login",
+					"protocol": "http",
+					"host": [
+						"task_management_system",
+						"local"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlNDVkYzE1NmIzYjg1MmFlOGJlOWFiODNlZDc2NTAzZTA0NmE0YmEyZTA3ZDE3OWIwNWQ2NWUwMzQ5NjNlYTc1MjhmYTFiMDE0MjdjYjYiLCJpYXQiOjE3MjE2MzAwMDguODEwODA3LCJuYmYiOjE3MjE2MzAwMDguODEwODA5LCJleHAiOjE3NTMxNjYwMDguNzkyMDAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.ez1ce4eVHok0Hw9AhyncOlfIhmYI2CRvUah_G12GDjc-7S-WpdcvVm2REzLTb9zjA8zcMgJWykmmBxsNbJYfuEy3xEoeJn8K80SoftZwny4qgtWJalBfj90pWsczgtN7m2Agyr5GmsbAbPszxGlOXCQxRQQ04lnaLROh6Xs2RIhbSpDR9pZby-t7-h_frMV-j1pIB37deV41az6fTNNQOROZeq5WF-oB70IXDwDhATUtda4SfHU-C_ol2bWIHrV2WemMq7GTjF_3oAjYKYyHlFyugIorXAl2M4Tvakl1dVwCTDqEqg_yuOXdpWRLm-PGh8q1eP1rGbxawTxQpd0R9xzhJDCuiSDkJfM3SSF_X8nC_nNXSm_xADl-QvMjfMbpsCP14-QMQyZBqVSVc2RSsyR5XVGWuT_WOAM0BXWAVdWmsMiDFq8NenUTSFVc2YvJeja6B1Wqxnz-_eS8Y8Odtnw0yHVzSkF6wLN4TA6A2tKr6-4WWustSIsI7BfrcfsY-A1c_1YtHavTQxbjbApqKlbOGP3icT1AQADWwt6wiq5zA5EjGQELEMwd4vZfH0vB47uqv6o_fIp1SRBddnNSGTdKOC80jHRVy6OOEKNbDwGkAu6kav_CMvwUZaJ8entxUfZT_zr3tYPQDYbrcEGfhgVfDsA8B2qmWv1M7waZyUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://task_management_system.local/api/tasks/listTask",
+					"protocol": "http",
+					"host": [
+						"task_management_system",
+						"local"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"listTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlNDVkYzE1NmIzYjg1MmFlOGJlOWFiODNlZDc2NTAzZTA0NmE0YmEyZTA3ZDE3OWIwNWQ2NWUwMzQ5NjNlYTc1MjhmYTFiMDE0MjdjYjYiLCJpYXQiOjE3MjE2MzAwMDguODEwODA3LCJuYmYiOjE3MjE2MzAwMDguODEwODA5LCJleHAiOjE3NTMxNjYwMDguNzkyMDAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.ez1ce4eVHok0Hw9AhyncOlfIhmYI2CRvUah_G12GDjc-7S-WpdcvVm2REzLTb9zjA8zcMgJWykmmBxsNbJYfuEy3xEoeJn8K80SoftZwny4qgtWJalBfj90pWsczgtN7m2Agyr5GmsbAbPszxGlOXCQxRQQ04lnaLROh6Xs2RIhbSpDR9pZby-t7-h_frMV-j1pIB37deV41az6fTNNQOROZeq5WF-oB70IXDwDhATUtda4SfHU-C_ol2bWIHrV2WemMq7GTjF_3oAjYKYyHlFyugIorXAl2M4Tvakl1dVwCTDqEqg_yuOXdpWRLm-PGh8q1eP1rGbxawTxQpd0R9xzhJDCuiSDkJfM3SSF_X8nC_nNXSm_xADl-QvMjfMbpsCP14-QMQyZBqVSVc2RSsyR5XVGWuT_WOAM0BXWAVdWmsMiDFq8NenUTSFVc2YvJeja6B1Wqxnz-_eS8Y8Odtnw0yHVzSkF6wLN4TA6A2tKr6-4WWustSIsI7BfrcfsY-A1c_1YtHavTQxbjbApqKlbOGP3icT1AQADWwt6wiq5zA5EjGQELEMwd4vZfH0vB47uqv6o_fIp1SRBddnNSGTdKOC80jHRVy6OOEKNbDwGkAu6kav_CMvwUZaJ8entxUfZT_zr3tYPQDYbrcEGfhgVfDsA8B2qmWv1M7waZyUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"title\": \"Titulo desde api\",\r\n    \"description\": \"description desde api\",\r\n    \"user_id\": 2,\r\n    \"expiration_date\": \"2024-07-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task_management_system.local/api/tasks/storeTask",
+					"protocol": "http",
+					"host": [
+						"task_management_system",
+						"local"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"storeTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlNDVkYzE1NmIzYjg1MmFlOGJlOWFiODNlZDc2NTAzZTA0NmE0YmEyZTA3ZDE3OWIwNWQ2NWUwMzQ5NjNlYTc1MjhmYTFiMDE0MjdjYjYiLCJpYXQiOjE3MjE2MzAwMDguODEwODA3LCJuYmYiOjE3MjE2MzAwMDguODEwODA5LCJleHAiOjE3NTMxNjYwMDguNzkyMDAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.ez1ce4eVHok0Hw9AhyncOlfIhmYI2CRvUah_G12GDjc-7S-WpdcvVm2REzLTb9zjA8zcMgJWykmmBxsNbJYfuEy3xEoeJn8K80SoftZwny4qgtWJalBfj90pWsczgtN7m2Agyr5GmsbAbPszxGlOXCQxRQQ04lnaLROh6Xs2RIhbSpDR9pZby-t7-h_frMV-j1pIB37deV41az6fTNNQOROZeq5WF-oB70IXDwDhATUtda4SfHU-C_ol2bWIHrV2WemMq7GTjF_3oAjYKYyHlFyugIorXAl2M4Tvakl1dVwCTDqEqg_yuOXdpWRLm-PGh8q1eP1rGbxawTxQpd0R9xzhJDCuiSDkJfM3SSF_X8nC_nNXSm_xADl-QvMjfMbpsCP14-QMQyZBqVSVc2RSsyR5XVGWuT_WOAM0BXWAVdWmsMiDFq8NenUTSFVc2YvJeja6B1Wqxnz-_eS8Y8Odtnw0yHVzSkF6wLN4TA6A2tKr6-4WWustSIsI7BfrcfsY-A1c_1YtHavTQxbjbApqKlbOGP3icT1AQADWwt6wiq5zA5EjGQELEMwd4vZfH0vB47uqv6o_fIp1SRBddnNSGTdKOC80jHRVy6OOEKNbDwGkAu6kav_CMvwUZaJ8entxUfZT_zr3tYPQDYbrcEGfhgVfDsA8B2qmWv1M7waZyUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"title\": \"Titulo desde api actualizado\",\r\n    \"description\": \"description desde api actualizado\",\r\n    \"user_id\": 1,\r\n    \"expiration_date\": \"2024-08-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task_management_system.local/api/tasks/updateTask/4",
+					"protocol": "http",
+					"host": [
+						"task_management_system",
+						"local"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"updateTask",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlNDVkYzE1NmIzYjg1MmFlOGJlOWFiODNlZDc2NTAzZTA0NmE0YmEyZTA3ZDE3OWIwNWQ2NWUwMzQ5NjNlYTc1MjhmYTFiMDE0MjdjYjYiLCJpYXQiOjE3MjE2MzAwMDguODEwODA3LCJuYmYiOjE3MjE2MzAwMDguODEwODA5LCJleHAiOjE3NTMxNjYwMDguNzkyMDAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.ez1ce4eVHok0Hw9AhyncOlfIhmYI2CRvUah_G12GDjc-7S-WpdcvVm2REzLTb9zjA8zcMgJWykmmBxsNbJYfuEy3xEoeJn8K80SoftZwny4qgtWJalBfj90pWsczgtN7m2Agyr5GmsbAbPszxGlOXCQxRQQ04lnaLROh6Xs2RIhbSpDR9pZby-t7-h_frMV-j1pIB37deV41az6fTNNQOROZeq5WF-oB70IXDwDhATUtda4SfHU-C_ol2bWIHrV2WemMq7GTjF_3oAjYKYyHlFyugIorXAl2M4Tvakl1dVwCTDqEqg_yuOXdpWRLm-PGh8q1eP1rGbxawTxQpd0R9xzhJDCuiSDkJfM3SSF_X8nC_nNXSm_xADl-QvMjfMbpsCP14-QMQyZBqVSVc2RSsyR5XVGWuT_WOAM0BXWAVdWmsMiDFq8NenUTSFVc2YvJeja6B1Wqxnz-_eS8Y8Odtnw0yHVzSkF6wLN4TA6A2tKr6-4WWustSIsI7BfrcfsY-A1c_1YtHavTQxbjbApqKlbOGP3icT1AQADWwt6wiq5zA5EjGQELEMwd4vZfH0vB47uqv6o_fIp1SRBddnNSGTdKOC80jHRVy6OOEKNbDwGkAu6kav_CMvwUZaJ8entxUfZT_zr3tYPQDYbrcEGfhgVfDsA8B2qmWv1M7waZyUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"title\": \"Titulo desde api actualizado\",\r\n    \"description\": \"description desde api actualizado\",\r\n    \"user_id\": 1,\r\n    \"expiration_date\": \"2024-08-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task_management_system.local/api/tasks/updateTask/4",
+					"protocol": "http",
+					"host": [
+						"task_management_system",
+						"local"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"updateTask",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

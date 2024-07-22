@@ -17,14 +17,14 @@ class RoleMiddleware
      * @param Request $request
      * @param Closure $next
      * @param $role
-     * @return Application|Factory|View|\Illuminate\Foundation\Application|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
-    public function handle(Request $request, Closure $next, $role): Application|Factory|View|\Illuminate\Foundation\Application|\Illuminate\View\View
+    public function handle(Request $request, Closure $next, $role): \Illuminate\Http\Response
     {
         if (auth()->check() && auth()->user()->hasRole($role)) {
             return $next($request);
         }
 
-        return view('error.404'); // O una página de acceso denegado
+        return response()->view('error.404', [], 404); // O una página de acceso denegado
     }
 }
